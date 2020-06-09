@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="css/swiper.min.css" rel="stylesheet"/>
 	<link href="css/base.css" rel="stylesheet"/>
 	
 	<title>全国垃圾回收大数据分析</title>
@@ -58,43 +59,57 @@
 					</div>
 					<!-- 城市智慧站使用人次排行 -->
 					<div class="left_item page_left3">
-						<div class="times page_card d-flex justify-content-between">
-							<div class="times_item">
-								<p class="myFont1">1000</p>
-								<div class="times_txt text-center">
-									<span>无锡</span>
-									<img src="images/times_item1.png" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="times_item">
-								<p class="myFont1">1000</p>
-								<div class="times_txt text-center">
-									<span>苏州</span>
-									<img src="images/times_item2.png" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="times_item">
-								<div class="fan_text"><span class="myFont3">1000</span></div>
-								<div class="times_txt text-center">
-									<span>上海</span>
-									<img src="images/times_item3.png" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="times_item">
-								<p class="myFont1">1000</p>
-								<div class="times_txt text-center">
-									<span>常州</span>
-									<img src="images/times_item4.png" alt="" class="img-fluid">
-								</div>
-							</div>
-							<div class="times_item">
-								<p class="myFont1">1000</p>
-								<div class="times_txt text-center">
-									<span>南京</span>
-									<img src="images/times_item5.png" alt="" class="img-fluid">
-								</div>
-							</div>
-
+						<div class="times page_card">
+							<!-- Swiper -->
+						  <div class="swiper-container">
+						    <div class="swiper-wrapper">
+						      <div class="swiper-slide">
+						      	<div class="times_item">
+											<p><span class="myFont1">1000</span></p>
+											<div class="times_txt text-center">
+												<span>无锡</span>
+												<img src="images/times_item1.png" alt="" class="img-fluid">
+											</div>
+										</div>
+						      </div>
+						      <div class="swiper-slide">
+						      	<div class="times_item">
+											<p><span class="myFont1">1000</span></p>
+											<div class="times_txt text-center">
+												<span>苏州</span>
+												<img src="images/times_item2.png" alt="" class="img-fluid">
+											</div>
+										</div>
+						      </div>
+						      <div class="swiper-slide">
+						      	<div class="times_item">
+											<p><span class="myFont1">1000</span></p>
+											<div class="times_txt text-center">
+												<span>上海</span>
+												<img src="images/times_item3.png" alt="" class="img-fluid">
+											</div>
+										</div>
+						      </div>
+						      <div class="swiper-slide">
+						      	<div class="times_item">
+											<p><span class="myFont1">1000</span></p>
+											<div class="times_txt text-center">
+												<span>常州</span>
+												<img src="images/times_item4.png" alt="" class="img-fluid">
+											</div>
+										</div>
+						      </div>
+						      <div class="swiper-slide">
+						      	<div class="times_item">
+											<p><span class="myFont1">1000</span></p>
+											<div class="times_txt text-center">
+												<span>南京</span>
+												<img src="images/times_item5.png" alt="" class="img-fluid">
+											</div>
+										</div>
+						      </div>
+						    </div>
+						  </div>
 						</div>
 					</div>
 					<!-- 垃圾分类价值 -->
@@ -397,6 +412,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.cxscroll.min.js"></script>
+<script src="js/swiper.min.js"></script>
 
 <script src="js/Echarts/echarts.min.js"></script>
 <script src="js/Echarts/echarts_theme.js"></script>

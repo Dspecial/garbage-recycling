@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-05 11:26:58
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-06-09 13:28:16
+* @Last Modified time: 2020-06-09 16:59:49
 */
 @charset "UTF-8";
 /*css 初始化 */
@@ -265,39 +265,56 @@ a:hover{text-decoration: none;}
 .times{
 
 }
-.times_item{
-  margin: 0 10px;
+.swiper-container {
+  width: 100%;
+  height: 100%;
 }
-.times_item:nth-of-type(3){
-  width: 45%;
-  font-size: 1.2rem;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: 300ms;
+  transform: scale(0.8);
 }
-.times_item:nth-of-type(3) img{
-  width: 80%;
+.swiper-slide-active,.swiper-slide-duplicate-active{
+  transform: scale(1);
 }
 .times_item p{
   background:rgba(2,47,116,1);
   box-shadow: inset 0px 10px 20px 0px rgba(27,98,214,1);
-  text-align: center;
-  padding: 2px 5px;
   margin: 15px 0 30px;
+}
+.times_item p span{
+  padding: 2px 5px;
+  text-align: center; 
 }
 .times_txt span{
   display: block;
   margin-bottom: 10px;
 }
-.fan_text{
+.swiper-slide-active .times_item p{
   background:rgba(58,167,192,0.2);
   border-top: 1px solid #00EDEB;
   border-bottom: 1px solid #00EDEB;
 }
-.fan_text span{
+.swiper-slide-active .times_item p span{
   background: -webkit-radial-gradient(circle, rgba(58,137,150,0.2) 0%,rgba(125,231,237,1) 100%);
   background: -o-radial-gradient(circle, rgba(58,137,150,0.2) 0%,rgba(125,231,237,1) 100%);
   background: radial-gradient(circle,rgba(58,137,150,0.2) 0%,rgba(125,231,237,1) 100%);
   display: block;
-  text-align: center;
-  padding: 2px 0;
 }
 .times_item .fan_text{
   margin: 12px 0 20px 0;
@@ -577,6 +594,19 @@ a:hover{text-decoration: none;}
   background-size: contain;
 }
 
+.fan_text{
+  background:rgba(58,167,192,0.2);
+  border-top: 1px solid #00EDEB;
+  border-bottom: 1px solid #00EDEB;
+}
+.fan_text span{
+  background: -webkit-radial-gradient(circle, rgba(58,137,150,0.2) 0%,rgba(125,231,237,1) 100%);
+  background: -o-radial-gradient(circle, rgba(58,137,150,0.2) 0%,rgba(125,231,237,1) 100%);
+  background: radial-gradient(circle,rgba(58,137,150,0.2) 0%,rgba(125,231,237,1) 100%);
+  display: block;
+  text-align: center;
+  padding: 2px 0;
+}
 .sum_item{
   margin: 0 8px;
   width: 33.333%;

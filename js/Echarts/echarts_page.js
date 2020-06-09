@@ -125,7 +125,7 @@ $(function () {
                 }
             },
             barGap: 0,
-            data: sideData
+            data: sideData,
         }, {
             name: '城市智慧站数量排行-3d部分',
             tooltip: {
@@ -158,7 +158,11 @@ $(function () {
             symbolPosition: 'end',
             data: chart1_data,
             z: 3
-        }]
+        }],
+        animationEasing: 'quadraticOut',
+        animationDelay: function (idx) {
+            return idx * 2;
+        },
     };
 
     option2 = {
@@ -219,6 +223,9 @@ $(function () {
                 symbolPosition: "start",
                 symbolMargin:[5,0],
                 data:[1805,1300,1050,850,1600],
+                animationDelay: function (idx) {
+                    return idx * 100;
+                },
                 itemStyle: {
                     normal: {
                         color: function(params) {
@@ -251,7 +258,8 @@ $(function () {
                 type: "bar"
             },
 
-        ]
+        ],
+        animationEasing: 'elasticOut',
     };
 
     var chart3_data = [
