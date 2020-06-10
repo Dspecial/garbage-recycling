@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-05 11:26:58
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-06-09 16:59:49
+* @Last Modified time: 2020-06-09 17:22:20
 */
 @charset "UTF-8";
 /*css 初始化 */
@@ -299,7 +299,8 @@ a:hover{text-decoration: none;}
 }
 .times_item p span{
   padding: 2px 5px;
-  text-align: center; 
+  text-align: center;
+  display: block;
 }
 .times_txt span{
   display: block;
