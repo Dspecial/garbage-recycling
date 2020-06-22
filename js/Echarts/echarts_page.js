@@ -1,15 +1,14 @@
-// 基于准备好的dom，初始化echarts实例
-var myChart1 = echarts.init(document.getElementById("charts1"),"Limitless");
-var myChart2 = echarts.init(document.getElementById("charts2"),"Limitless");
-var myChart3 = echarts.init(document.getElementById("charts3"),"Limitless");
-var myChart4 = echarts.init(document.getElementById("charts4"),"Limitless");
-var myChart5 = echarts.init(document.getElementById("charts5"),"Limitless");
-var myChart6 = echarts.init(document.getElementById("charts6"),"Limitless");
-
-const chart1_data = [900, 800, 700, 650, 600, 550, 500, 450, 400, 300]
-const sideData = chart1_data.map(item => item + 25);
-
 $(function () {
+    // 基于准备好的dom，初始化echarts实例
+    var myChart1 = echarts.init(document.getElementById("charts1"),"Limitless");
+    var myChart2 = echarts.init(document.getElementById("charts2"),"Limitless");
+    var myChart3 = echarts.init(document.getElementById("charts3"),"Limitless");
+    var myChart4 = echarts.init(document.getElementById("charts4"),"Limitless");
+    var myChart5 = echarts.init(document.getElementById("charts5"),"Limitless");
+    var myChart6 = echarts.init(document.getElementById("charts6"),"Limitless");
+
+    const chart1_data = [900, 800, 700, 650, 600, 550, 500, 450, 400, 300]
+    const sideData = chart1_data.map(item => item + 25);
     option1 = {
         tooltip: {
             trigger: 'axis',
@@ -62,6 +61,9 @@ $(function () {
         },
         series: [{
             name: '城市智慧站数量排行',
+            tooltip: {
+                show: false
+            },
             type: 'bar',
             barWidth: 16,
             itemStyle: {
@@ -101,10 +103,6 @@ $(function () {
             data: chart1_data,
             barGap: 0
         }, {
-            name: '城市智慧站数量排行-3d右侧部分',
-            tooltip: {
-                show: false
-            },
             type: 'bar',
             barWidth: 5,
             itemStyle: {
@@ -129,7 +127,7 @@ $(function () {
             barGap: 0,
             data: sideData,
         }, {
-            name: '城市智慧站数量排行-3d头部分',
+            name: '城市智慧站数量排行-3d部分',
             tooltip: {
                 show: false
             },
