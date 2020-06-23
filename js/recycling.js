@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-06 17:00:09
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-06-23 17:12:31
+* @Last Modified time: 2020-06-23 17:40:52
 */
 $(function () {
 	// 请求ajax 
@@ -23,7 +23,7 @@ $(function () {
 	  	console.log(response.data);
 	  	if(response.code == 200){ //Success
 	  		var data = response.data;
-
+	  		
 	  		/* ----------- 左边 ----------- */
 	  		// 城市智慧站数量排行 machineCountRanking
         machineCount(data.machineCountRanking);

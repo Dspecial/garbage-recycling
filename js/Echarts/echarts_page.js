@@ -689,4 +689,14 @@ $(function () {
     if (option6 && typeof option6 === "object") {
         myChart6.setOption(option6, true);
     }
+
+    tools.loopShowTooltip(myChart5, option5,{
+        interval: 4000,
+        loopSeries: true
+    });
+    tools.loopShowTooltip(myChart6, option6,{
+        interval: 4000,
+        loopSeries: true
+    });
 });
+
