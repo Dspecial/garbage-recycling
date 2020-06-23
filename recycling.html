@@ -23,37 +23,12 @@
 					</div>
 					<!-- 城市减少二氧化碳排行 -->
 					<div class="left_item page_left2">
-						<div class="co2 page_card d-flex justify-content-between">
-							<div class="rank_item">
+						<div class="co2 page_card d-flex justify-content-between" id="co2">
+							<!-- <div class="rank_item">
 								<p>NO.1</p>
 								<span>上海</span>
 								<div class="vertical_line"></div>
-							</div>
-							<div class="rank_item">
-								<p>NO.2</p>
-								<span>北京</span>
-								<div class="vertical_line"></div>
-							</div>
-							<div class="rank_item">
-								<p>NO.3</p>
-								<span>苏州</span>
-								<div class="vertical_line"></div>
-							</div>
-							<div class="rank_item">
-								<p>NO.4</p>
-								<span>无锡</span>
-								<div class="vertical_line"></div>
-							</div>
-							<div class="rank_item">
-								<p>NO.5</p>
-								<span>常州</span>
-								<div class="vertical_line"></div>
-							</div>
-							<div class="rank_item">
-								<p>NO.6</p>
-								<span>南京</span>
-								<div class="vertical_line"></div>
-							</div>
+							</div> -->
 						</div>
 						<div class="co2_img"><span>排名</span>	</div>
 					</div>
@@ -62,8 +37,8 @@
 						<div class="times page_card">
 							<!-- Swiper -->
 						  <div class="swiper-container">
-						    <div class="swiper-wrapper">
-						      <div class="swiper-slide">
+						    <div class="swiper-wrapper" id="swiper-wrapper">
+						      <!-- <div class="swiper-slide">
 						      	<div class="times_item">
 											<p><span class="myFont1">1000</span></p>
 											<div class="times_txt text-center">
@@ -71,43 +46,7 @@
 												<img src="images/times_item1.png" alt="" class="img-fluid">
 											</div>
 										</div>
-						      </div>
-						      <div class="swiper-slide">
-						      	<div class="times_item">
-											<p><span class="myFont1">1000</span></p>
-											<div class="times_txt text-center">
-												<span>苏州</span>
-												<img src="images/times_item2.png" alt="" class="img-fluid">
-											</div>
-										</div>
-						      </div>
-						      <div class="swiper-slide">
-						      	<div class="times_item">
-											<p><span class="myFont1">1000</span></p>
-											<div class="times_txt text-center">
-												<span>上海</span>
-												<img src="images/times_item3.png" alt="" class="img-fluid">
-											</div>
-										</div>
-						      </div>
-						      <div class="swiper-slide">
-						      	<div class="times_item">
-											<p><span class="myFont1">1000</span></p>
-											<div class="times_txt text-center">
-												<span>常州</span>
-												<img src="images/times_item4.png" alt="" class="img-fluid">
-											</div>
-										</div>
-						      </div>
-						      <div class="swiper-slide">
-						      	<div class="times_item">
-											<p><span class="myFont1">1000</span></p>
-											<div class="times_txt text-center">
-												<span>南京</span>
-												<img src="images/times_item5.png" alt="" class="img-fluid">
-											</div>
-										</div>
-						      </div>
+						      </div> -->
 						    </div>
 						  </div>
 						</div>
@@ -124,32 +63,23 @@
 							<div id="charts3" class="charts3" style="height: 630px;margin: 0 auto;width:90%"></div>
 							<!-- 各项垃圾清运时间 -->
 							<div class="middle_item page_middle1_1">
-								<div class="page_card">
-									<p class="d-flex justify-content-between">
+								<div class="page_card" id="clearTime">
+									<!-- <p class="d-flex justify-content-between">
 										<span>干垃圾</span><span class="myFont2">06:00 ~ 07:00</span>
-									</p>
-									<p class="d-flex justify-content-between">
-										<span>湿垃圾</span><span class="myFont2">07:00 ~ 08:00</span>
-									</p>
-									<p class="d-flex justify-content-between">
-										<span>可回收垃圾</span><span class="myFont2">08:00 ~ 10:00</span>
-									</p>
-									<p class="d-flex justify-content-between">
-										<span>不可回收垃圾</span><span class="myFont2">10:00 ~ 12:00</span>
-									</p>
+									</p> -->
 								</div>
 							</div>
 							<!-- 投递人次 -->
 							<div class="middle_item toudi page_middle1_2">
 								<h5 class="title">投递人次</h5>
-								<h6 class="title3 myFont2">10000 <span></span></h6>
+								<h6 class="title3 myFont2" id="toudi">10000 <span></span></h6>
 								<img src="images/toudi.png" alt="" class="img-fluid">
 							</div>
 
 							<!-- 清运人次	-->
 							<div class="middle_item qingyun page_middle1_2">
 								<h5 class="title">清运人次</h5>
-								<h6 class="title3 myFont2">10000 <span></span></h6>
+								<h6 class="title3 myFont2" id="qingyun">10000 <span></span></h6>
 								<img src="images/qingyun.png" alt="" class="img-fluid">
 							</div>
 						</div>
@@ -163,58 +93,12 @@
 							</div>
 							<div class="decrease_right">
 								<h4 class="title title1">各城市垃圾减量占比排名<span></span></h4>
-								<div class="decrease_rank d-flex justify-content-between flex-wrap">
-									<div class="decrease_item d-flex justify-content-between">
+								<div class="decrease_rank d-flex justify-content-between flex-wrap" id="decrease_rank">
+									<!-- <div class="decrease_item d-flex justify-content-between">
 										<div class="col-2 level">1</div>
 										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
 										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">2</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">3</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">4</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">5</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">6</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">7</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">8</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">9</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-									<div class="decrease_item d-flex justify-content-between">
-										<div class="col-2 level">10</div>
-										<div class="col-7 city">北京 <span class="ml-2">beijing</span></div>
-										<div class="col-3 num">80%</div>
-									</div>
-
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -230,19 +114,19 @@
 								<h4 class="title title1">分类干湿垃圾重量<span></span></h4>
 								<div class="sum_box sum_box1 d-flex flex-wrap align-content-center text-center">
 									<h5 class="mb-2">重量(kg)</h5>
-									<p class="myFont1">10000</p>
+									<p class="myFont1" id="summary_1">10000</p>
 								</div>
 
 							</div>
 							<div class="sum_item">
 								<h4 class="title title2">分类回收瓶子个数</h4>
-								<div class="fan_text"><span class="myFont3">0045482</span></div>
+								<div class="fan_text"><span class="myFont3" id="summary_3">0045482</span></div>
 							</div>
 							<div class="sum_item">
 								<h4 class="title title1">分类可回收纸箱重量<span></span></h4>
 								<div class="sum_box sum_box2 d-flex flex-wrap align-content-center text-center">
 									<h5 class="mb-2">重量(kg)</h5>
-									<p class="myFont1">10000</p>
+									<p class="myFont1" id="summary_2">10000</p>
 								</div>
 							</div>
 						</div>
@@ -267,14 +151,14 @@
 								<h6 class="title">分类正确</h6>
 								<div class="result_content d-flex justify-content-between align-items-center">
 									<img src="images/result_true.png" alt="" class="img-fluid">
-									<span class="text-center">65%</span>
+									<span class="text-center" id="result_true">65%</span>
 								</div>
 							</div>
 							<div class="result_item">
 								<h6 class="title">分类错误</h6>
 								<div class="result_content d-flex justify-content-between align-items-center">
 									<img src="images/result_false.png" alt="" class="img-fluid">
-									<span class="text-center">35%</span>
+									<span class="text-center" id="result_false">35%</span>
 								</div>
 							</div>
 						</div>
@@ -294,7 +178,7 @@
 								</div>
 								<div class="tbody box">
 									<ul class="list">
-										<li>
+										<!-- <li>
 											<div>
 												<span>上海</span>
 												<span>浦东新区</span>
@@ -303,47 +187,7 @@
 												<span>1</span>
 												<span>2020-05-12 08:00:00</span>
 											</div>
-										</li>
-										<li>
-											<div>
-												<span>北京</span>
-												<span>浦东新区</span>
-												<span>李四</span>
-												<span>1kg</span>
-												<span>1</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span>深圳</span>
-												<span>浦东新区</span>
-												<span>王五</span>
-												<span>1kg</span>
-												<span>1</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span>内蒙古</span>
-												<span>浦东新区</span>
-												<span>周六</span>
-												<span>1kg</span>
-												<span>1</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span>呼和浩特</span>
-												<span>浦东新区</span>
-												<span>钱七七</span>
-												<span>1kg</span>
-												<span>1</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
+										</li> -->
 									</ul>
 								</div>
 							</div>
@@ -358,46 +202,14 @@
 								</div>
 								<div class="tbody box">
 									<ul class="list">
-										<li>
+										<!-- <li>
 											<div>
 												<span>上海</span>
 												<span>浦东新区</span>
 												<span>李大大</span>
 												<span>2020-05-12 08:00:00</span>
 											</div>
-										</li>
-										<li>
-											<div>
-												<span>北京</span>
-												<span>浦东新区</span>
-												<span>王炸</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span>深圳</span>
-												<span>浦东新区</span>
-												<span>王五</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span>内蒙古</span>
-												<span>浦东新区</span>
-												<span>周六</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span>呼和浩特</span>
-												<span>浦东新区</span>
-												<span>钱七七</span>
-												<span>2020-05-12 08:00:00</span>
-											</div>
-										</li>
+										</li> -->
 									</ul>
 								</div>
 							</div>

@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-05 11:26:58
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-06-09 17:22:20
+* @Last Modified time: 2020-06-23 17:01:55
 */
 @charset "UTF-8";
 /*css 初始化 */
@@ -355,7 +355,7 @@ a:hover{text-decoration: none;}
 }
 .page_middle1_1 .page_card p{
   margin-bottom:0;
-  margin-top: 10px;
+  margin-top: 5px;
   opacity: 0.8;
   filter: Alpha(opacity=80);
   font-size: 12px;
@@ -516,6 +516,7 @@ a:hover{text-decoration: none;}
 .decrease_item .city{
   opacity: 0.5;
   filter: Alpha(opacity=50);
+  padding-right: 0;
 }
 .decrease_item .num{
   opacity: 0.5;
@@ -552,36 +553,6 @@ a:hover{text-decoration: none;}
 }
 .decrease_item:nth-of-type(10) .level{
   background: #FF8285;
-}
-.decrease_item:nth-of-type(1){
-  order:1;
-}
-.decrease_item:nth-of-type(6){
-  order:2;
-}
-.decrease_item:nth-of-type(2){
-  order:3;
-}
-.decrease_item:nth-of-type(7){
-  order:4;
-}
-.decrease_item:nth-of-type(3){
-  order:5;
-}
-.decrease_item:nth-of-type(8){
-  order:6;
-}
-.decrease_item:nth-of-type(4){
-  order:7;
-}
-.decrease_item:nth-of-type(9){
-  order:8;
-}
-.decrease_item:nth-of-type(5){
-  order:9;
-}
-.decrease_item:nth-of-type(10){
-  order:10;
 }
 
 /*右边*/
@@ -725,22 +696,22 @@ a:hover{text-decoration: none;}
   background:rgba(3,46,106,1);
 }
 #delivery .thead span:nth-of-type(1),#delivery .tbody span:nth-of-type(1){
-  width: 60px;
+  width: 55px;
 }
 #delivery .thead span:nth-of-type(2),#delivery .tbody span:nth-of-type(2){
-  width: 60px;
+  width: 55px;
 }
 #delivery .thead span:nth-of-type(3),#delivery .tbody span:nth-of-type(3){
-  width: 45px;
+  width: 75px;
 }
 #delivery .thead span:nth-of-type(4),#delivery .tbody span:nth-of-type(4){
-  width: 54px;
+  width: 55px;
 }
 #delivery .thead span:nth-of-type(5),#delivery .tbody span:nth-of-type(5){
   width: 55px;
 }
 #delivery .thead span:nth-of-type(6),#delivery .tbody span:nth-of-type(6){
-  width: 135px;
+  width: 114px;
 }
 
 #check .thead span:nth-of-type(1),#check .tbody span:nth-of-type(1){
