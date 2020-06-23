@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-06 17:00:09
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-06-23 17:40:52
+* @Last Modified time: 2020-06-23 17:51:38
 */
 $(function () {
 	// 请求ajax 
@@ -20,59 +20,58 @@ $(function () {
 	  contentType: "application/json;charset=utf-8",
 	  dataType: "json",
 	  success: function(response){
-	  	console.log(response.data);
-	  	if(response.code == 200){ //Success
-	  		var data = response.data;
-	  		
-	  		/* ----------- 左边 ----------- */
-	  		// 城市智慧站数量排行 machineCountRanking
-        machineCount(data.machineCountRanking);
-        // 城市减少二氧化碳排行 reduceCo2Ranking
-        reduceCo2(data.reduceCo2Ranking);
-        // 城市智慧站使用人次排行 useCountRanking
-        useCount(data.useCountRanking);
-        // 垃圾分类价值 rubbishBackValue
-        rubbishBackValue(data.rubbishBackValue);
+	  	// console.log(response.data);
+	  	if(response.code == 200){//Success
+				var data = response.data;
+				/* ----------- 左边 ----------- */
+				// 城市智慧站数量排行 machineCountRanking
+				machineCount(data.machineCountRanking);
+				// 城市减少二氧化碳排行 reduceCo2Ranking
+				reduceCo2(data.reduceCo2Ranking);
+				// 城市智慧站使用人次排行 useCountRanking
+				useCount(data.useCountRanking);
+				// 垃圾分类价值 rubbishBackValue
+				rubbishBackValue(data.rubbishBackValue);
 
-        /* ----------- 中间 ----------- */
-        // 地图
-        
-        // 各项垃圾清运时间 rubbishClearTime
-        rubbishClearTime(data.rubbishClearTime); 
-        // 投递人次
-        $("#toudi").text(data.totalPutCount);
-        // 清运人次
-        $("#qingyun").text(data.totalBackCount);
-        /* 各城市垃圾减量 */
-        // 各城市垃圾减量数量 reduceRubbishRanking
-        reduceRubbishRank(data.reduceRubbishRanking);
-        // 各城市垃圾减量占比排名 reduceRubbishPercent
-        reduceRubbishPercent(data.reduceRubbishPercent);
+				/* ----------- 中间 ----------- */
+				// 地图
 
-        /* ----------- 右边 ----------- */
-        /* 垃圾分类数据汇总 */
-        // 分类干湿垃圾重量
-        $("#summary_1").text(data.totalDryCookWeight);
-        // 分类可回收纸箱重量
-        $("#summary_2").text(data.totalPaperWeight);
-        // 分类回收瓶子个数
-        $("#summary_3").text(data.totalBottleCount);
+				// 各项垃圾清运时间 rubbishClearTime
+				rubbishClearTime(data.rubbishClearTime); 
+				// 投递人次
+				$("#toudi").text(data.totalPutCount);
+				// 清运人次
+				$("#qingyun").text(data.totalBackCount);
+				/* 各城市垃圾减量 */
+				// 各城市垃圾减量数量 reduceRubbishRanking
+				reduceRubbishRank(data.reduceRubbishRanking);
+				// 各城市垃圾减量占比排名 reduceRubbishPercent
+				reduceRubbishPercent(data.reduceRubbishPercent);
 
-        /* 垃圾投递、清运时间占比 */
-        // 垃圾回收时间占比 putTimeZonePercent
-        timeZone(data.putTimeZonePercent,myChart5,option5,"垃圾回收时间");
-		    // 垃圾投递时间占比 backTimeZonePercent
-		    timeZone(data.backTimeZonePercent,myChart6,option6,"垃圾投递时间");
+				/* ----------- 右边 ----------- */
+				/* 垃圾分类数据汇总 */
+				// 分类干湿垃圾重量
+				$("#summary_1").text(data.totalDryCookWeight);
+				// 分类可回收纸箱重量
+				$("#summary_2").text(data.totalPaperWeight);
+				// 分类回收瓶子个数
+				$("#summary_3").text(data.totalBottleCount);
 
-        /* 垃圾分类执行效果 */
-        // 分类正确
-        $("#result_true").text(data.putSuccessPercent + '%');
-        // 分类错误
-        $("#result_false").text(data.putErrorPercent  + '%');
+				/* 垃圾投递、清运时间占比 */
+				// 垃圾回收时间占比 putTimeZonePercent
+				timeZone(data.putTimeZonePercent,myChart5,option5,"垃圾回收时间");
+				// 垃圾投递时间占比 backTimeZonePercent
+				timeZone(data.backTimeZonePercent,myChart6,option6,"垃圾投递时间");
 
-        /* 垃圾投递清运记录 */
-        // 投递记录 latelyPutRecord
-        latelyRecord(data.latelyPutRecord,"#delivery");
+				/* 垃圾分类执行效果 */
+				// 分类正确
+				$("#result_true").text(data.putSuccessPercent + '%');
+				// 分类错误
+				$("#result_false").text(data.putErrorPercent  + '%');
+
+				/* 垃圾投递清运记录 */
+				// 投递记录 latelyPutRecord
+				latelyRecord(data.latelyPutRecord,"#delivery");
 
 				// 清运记录 latelyBackRecord
 				latelyRecord(data.latelyBackRecord,"#check");
