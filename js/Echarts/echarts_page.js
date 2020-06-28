@@ -6,8 +6,89 @@ var myChart4 = echarts.init(document.getElementById("charts4"),"Limitless");
 var myChart5 = echarts.init(document.getElementById("charts5"),"Limitless");
 var myChart6 = echarts.init(document.getElementById("charts6"),"Limitless");
 
-const chart1_data = [900, 800, 700, 650, 600, 550, 500, 450, 400, 300]
-const sideData = chart1_data.map(item => item + 25);
+var chart1_data = [900, 800, 700, 650, 600, 550, 500, 450, 400, 300]
+var sideData = chart1_data.map(item => item + 25);
+
+var chart3_data = [
+    // {
+    //     name: '海门',
+    //     value: 7000, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+    // {
+    //     name: '西藏',
+    //     value: 12000, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+    // {
+    //     name: '贵州',
+    //     value: 4500, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+    // {
+    //     name: '江苏',
+    //     value: 1100, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+    // {
+    //     name: '重庆',
+    //     value: 750, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+    // {
+    //     name: '北京',
+    //     value: 100, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+    // {
+    //     name: '青海',
+    //     value: 4600, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+    // {
+    //     name: '南海诸岛',
+    //     value: 4600, // 投放智慧站
+    //     value2: 20000, // 已分类垃圾
+    //     value3: 3000, // 已分类纸箱
+    //     value4: 20000, // 已分类瓶子
+    //     value5: 1000, // 已减少二氧化碳
+    // },
+];
+
+function convertData(data) {
+   var res = [];
+   for (var i = 0; i < data.length; i++) {
+       var geoCoord = geoCoordMap[data[i].name];
+       if (geoCoord) {
+           res.push({
+               name: data[i].name,
+               value: geoCoord.concat(data[i].value)
+           });
+       }
+   }
+   return res;
+};
 
 $(function () {
     option1 = {
@@ -264,87 +345,6 @@ $(function () {
         animationEasing: 'elasticOut',
     };
 
-    var chart3_data = [
-        {
-            name: '海门',
-            value: 7000, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-        {
-            name: '西藏',
-            value: 12000, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-        {
-            name: '贵州',
-            value: 4500, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-        {
-            name: '江苏',
-            value: 1100, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-        {
-            name: '重庆',
-            value: 750, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-        {
-            name: '北京',
-            value: 100, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-        {
-            name: '青海',
-            value: 4600, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-        {
-            name: '南海诸岛',
-            value: 4600, // 投放智慧站
-            value2: 20000, // 已分类垃圾
-            value3: 3000, // 已分类纸箱
-            value4: 20000, // 已分类瓶子
-            value5: 1000, // 已减少二氧化碳
-        },
-    ];
-
-    function convertData(data) {
-       var res = [];
-       for (var i = 0; i < data.length; i++) {
-           var geoCoord = geoCoordMap[data[i].name];
-           if (geoCoord) {
-               res.push({
-                   name: data[i].name,
-                   value: geoCoord.concat(data[i].value)
-               });
-           }
-       }
-       return res;
-    };
-
     option3 = {
         legend: {
             show: false
@@ -401,32 +401,32 @@ $(function () {
             showLabel: !0,
             text: ["高", "低"],
             pieces: [{
-                gte: 10000,
-                label: "> 10000 吨",
+                gte: 100,
+                label: "> 100 吨",
                 color: "#FF817E"
             },{
-                gte: 5000,
-                lte: 10000,
-                label: "5000 - 10000 吨",
+                gte: 50,
+                lte: 100,
+                label: "50 - 100 吨",
                 color: "#FFEC3D"
             },{
-                gte: 2000,
-                lte: 5000,
-                label: "2000 - 5000 吨",
+                gte: 20,
+                lte: 50,
+                label: "20 - 50 吨",
                 color: "#7BDA56"
             }, {
-                gte: 1000,
-                lte: 2000,
-                label: "1000 - 2000 吨",
+                gte: 10,
+                lte: 20,
+                label: "10 - 20 吨",
                 color: "#ff8c71"
             }, {
-                gte: 500,
-                lt: 1000,
-                label: "500 - 1000 吨",
+                gte: 5,
+                lt: 10,
+                label: "5 - 10 吨",
                 color: "#36CFC9"
             }, {
-                lt: 500,
-                label: "< 500 吨",
+                lt: 5,
+                label: "< 5 吨",
                 color: "#009FFF"
             }],
             show: false,// 不显示 visualMap

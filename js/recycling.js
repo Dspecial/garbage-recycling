@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-06 17:00:09
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-06-23 17:51:38
+* @Last Modified time: 2020-06-28 10:20:05
 */
 $(function () {
 	// 请求ajax 
@@ -20,7 +20,7 @@ $(function () {
 	  contentType: "application/json;charset=utf-8",
 	  dataType: "json",
 	  success: function(response){
-	  	// console.log(response.data);
+	  	console.log(response.data);
 	  	if(response.code == 200){//Success
 				var data = response.data;
 				/* ----------- 左边 ----------- */
@@ -34,8 +34,8 @@ $(function () {
 				rubbishBackValue(data.rubbishBackValue);
 
 				/* ----------- 中间 ----------- */
-				// 地图
-
+				// 地图 mapRubbishList
+				mapRubbish(data.mapRubbishList);
 				// 各项垃圾清运时间 rubbishClearTime
 				rubbishClearTime(data.rubbishClearTime); 
 				// 投递人次
@@ -166,8 +166,25 @@ function rubbishBackValue(data){
 };
 
 // 地图
-function mapRubbishList(){
-
+function mapRubbish(data){
+	var map_data = [{}];
+	$.each(data, function(i,val){     
+    //console.log(val);
+    map_data[i].name = val.localName;
+    map_data[i].value = val.machineCount; // 投放智慧站
+    map_data[i].value2 = val.rubbishWeigh; // 已分类垃圾
+    map_data[i].value3 = val.paperWeigh; // 已分类纸箱
+    map_data[i].value4 = val.bottleCount; // 已分类瓶子
+    map_data[i].value5 = val.co2Weigh; // 已减少二氧化碳
+  });
+  myChart3.setOption({                                
+    series:[
+      { //根据名字对应到相应的系列
+        name:"垃圾回收",
+        data:map_data,
+      }
+    ]
+  });
 };
 
 // 各项垃圾清运时间
