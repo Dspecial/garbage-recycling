@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-05 11:26:58
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-06-23 17:59:37
+* @Last Modified time: 2020-07-17 18:13:34
 */
 @charset "UTF-8";
 /*css 初始化 */
@@ -306,6 +306,31 @@ a:hover{text-decoration: none;}
   display: block;
   margin-bottom: 10px;
 }
+.times_txt .times_img{
+  width: 66px;
+  height: 76px;
+}
+.swiper-slide:nth-of-type(n+3) .times_txt .times_img{
+  background:url("../images/times_item1.png") no-repeat center center;
+  background-size:cover;
+}
+.swiper-slide:nth-of-type(2n+3) .times_txt .times_img{
+  background:url("../images/times_item2.png") no-repeat center center;
+  background-size:cover;
+}
+.swiper-slide:nth-of-type(3n+3) .times_txt .times_img{
+  background:url("../images/times_item3.png") no-repeat center center;
+  background-size:cover;
+}
+.swiper-slide:nth-of-type(4n+3) .times_txt .times_img{
+  background:url("../images/times_item4.png") no-repeat center center;
+  background-size:cover;
+}
+.swiper-slide:nth-of-type(5n+3) .times_txt .times_img{
+  background:url("../images/times_item5.png") no-repeat center center;
+  background-size:cover;
+}
+
 .swiper-slide-active .times_item p{
   background:rgba(58,167,192,0.2);
   border-top: 1px solid #00EDEB;
@@ -695,26 +720,26 @@ a:hover{text-decoration: none;}
 .cxscroll .tbody ul.list li> div:hover{
   background:rgba(3,46,106,1);
 }
-#delivery .thead span:nth-of-type(1),#delivery .tbody span:nth-of-type(1){
+.cxscroll .thead span:nth-of-type(1),.cxscroll .tbody span:nth-of-type(1){
   width: 55px;
 }
-#delivery .thead span:nth-of-type(2),#delivery .tbody span:nth-of-type(2){
+.cxscroll .thead span:nth-of-type(2),.cxscroll .tbody span:nth-of-type(2){
   width: 55px;
 }
-#delivery .thead span:nth-of-type(3),#delivery .tbody span:nth-of-type(3){
+.cxscroll .thead span:nth-of-type(3),.cxscroll .tbody span:nth-of-type(3){
   width: 75px;
 }
-#delivery .thead span:nth-of-type(4),#delivery .tbody span:nth-of-type(4){
+.cxscroll .thead span:nth-of-type(4),.cxscroll .tbody span:nth-of-type(4){
   width: 55px;
 }
-#delivery .thead span:nth-of-type(5),#delivery .tbody span:nth-of-type(5){
+.cxscroll .thead span:nth-of-type(5),.cxscroll .tbody span:nth-of-type(5){
   width: 55px;
 }
-#delivery .thead span:nth-of-type(6),#delivery .tbody span:nth-of-type(6){
+.cxscroll .thead span:nth-of-type(6),.cxscroll .tbody span:nth-of-type(6){
   width: 114px;
 }
 
-#check .thead span:nth-of-type(1),#check .tbody span:nth-of-type(1){
+/*#check .thead span:nth-of-type(1),#check .tbody span:nth-of-type(1){
   width: 90px;
 }
 #check .thead span:nth-of-type(2),#check .tbody span:nth-of-type(2){
@@ -725,4 +750,4 @@ a:hover{text-decoration: none;}
 }
 #check .thead span:nth-of-type(4),#check .tbody span:nth-of-type(4){
   width: 170px;
-}
+}*/

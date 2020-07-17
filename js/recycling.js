@@ -3,7 +3,7 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-06 17:00:09
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-07-05 09:54:21
+* @Last Modified time: 2020-07-17 18:10:35
 */
 $(function () {
 	// 请求ajax 
@@ -131,7 +131,8 @@ function useCount(data){
 					<p><span class="myFont1">`+ slide.yAxis +`</span></p>
 					<div class="times_txt text-center">
 						<span>`+ slide.xAxis +`</span>
-						<img src="images/times_item`+ (i+1) +`.png" alt="" class="img-fluid">
+						<div class="times_img">
+						</div>
 					</div>
 				</div>
       </div>
@@ -259,8 +260,7 @@ function latelyRecord(data,parentDom){
 	for(var i = 0; i< data.length; i++){
 		var lately = data[i];
 		var liHtml;
-		if("totalWeight" in lately){
-			liHtml = `
+		liHtml = `
 				<li>
 					<div>
 						<span>` + lately.cityName+ `</span>
@@ -272,18 +272,6 @@ function latelyRecord(data,parentDom){
 					</div>
 				</li>
 			`;
-		}else{
-			liHtml = `
-				<li>
-					<div>
-						<span>` + lately.cityName+ `</span>
-						<span>` + lately.distName+ `</span>
-						<span>` + lately.userName+ `</span>
-						<span>` + lately.createTime+ `</span>
-					</div>
-				</li>
-			`;
-		}
 		$(parentDom + " ul").append(liHtml);
 	}
 
