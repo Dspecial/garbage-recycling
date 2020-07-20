@@ -3,8 +3,9 @@
 * @Email: dxxtalking@163.com
 * @Date:   2020-06-06 17:00:09
 * @Last Modified by:   dxx
-* @Last Modified time: 2020-07-17 18:10:35
+* @Last Modified time: 2020-07-20 16:26:25
 */
+var golablUrl = "https://xj.xj-ept.com";
 $(function () {
 	// 请求ajax 
 	var json_data = {
@@ -15,9 +16,10 @@ $(function () {
 
 	$.ajax({
 	  type: "POST",
-	  url: "/api/Open/GetDataBoard",
+	  url: golablUrl + "/api/Open/GetDataBoard",
 	  data: JSON.stringify(json_data),
 	  contentType: "application/json;charset=utf-8",
+	  //contentType: "application/x-www-form-urlencoded",
 	  dataType: "json",
 	  success: function(response){
 	  	console.log(response.data);
